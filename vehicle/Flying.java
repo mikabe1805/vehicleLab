@@ -1,4 +1,4 @@
-package vehicleLab;
+package vehicle;
 
 abstract interface Flying{
     /** @throws IllegalArgumentException if miles is negative.*/

@@ -1,4 +1,4 @@
-package vehicleLab;
+package vehicle;
 
 abstract interface SelfDriving{
 /** @throws IllegalArgumentException if miles is negative.*/

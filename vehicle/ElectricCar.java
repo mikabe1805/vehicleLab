@@ -1,4 +1,4 @@
-package vehicleLab;
+package vehicle;
 import java.util.*;
 
 abstract class ElectricCar extends Car{
