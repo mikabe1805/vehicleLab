@@ -2,7 +2,7 @@ package vehicle;
 
 import java.util.*;
 
-class HondaAccordian extends GasPoweredCar {
+public class HondaAccordian extends GasPoweredCar {
 
     private int modelYear;
 	/** modelYear specifies the year this car was made. Honda cares about
