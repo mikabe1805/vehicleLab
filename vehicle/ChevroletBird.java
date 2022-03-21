@@ -33,17 +33,13 @@ class ChevroletBird extends ElectricCar implements Flying{
     }
 
     public boolean canFly(double miles){
-        if (miles < 0){
-            throw new IllegalArgumentException();
-        }
-        return !(miles > getMaxRange());
+        return this.canDrive(miles);
     }
 
     public void fly(double miles){
         this.isRetracted = false;
-        if (miles < 0 || miles > getMaxRange()){
-            throw new IllegalArgumentException();
+        if (this.canFly(miles)){
+            this.decreaseCharge(miles);
         }
-        
     }
 }
