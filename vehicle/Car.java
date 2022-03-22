@@ -11,6 +11,9 @@ abstract class Car{
     public Car(String make, String model, double startingMileage) {
         this.make = make;
         this.model = model;
+        if (startingMileage < 0) {
+            throw new IllegalArgumentException();
+        }
         this.mileage = startingMileage;
     }
 
