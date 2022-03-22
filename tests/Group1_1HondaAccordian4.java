@@ -26,7 +26,15 @@ public class Group1_1HondaAccordian4 extends BCATestScenario{
 
         assertEquals(h.getRemainingRange(), 4.4, .1, "Remaining range is 4.4");
 
-        assertEquals(h.roadTrip({3, 3, 3}));
+        List<Double> list = List.of(20.2, 20.0, 20.0);
+        assertEquals(h.roadTrip(list), 48, .1, "# of days in driving will be 48 days.");
+
+        assertEquals(h.toString(), "Honda Accordian 2018 (90.2 mi)", "toString should return Honda Accordian 2018 (90.2 mi");
+
+        List<Double> list2 = List.of(20.2, -20.0, 20.0);
+        assertThrows(IllegalArgumentException.class, () -> {h.roadTrip(list2);}, "Mileage cannot be negative.");
+
+        assertEquals(h.getMileage(), 90.2, .1, "Mileage is 90.2 mi");
 
         return getFailedCount();
     }
