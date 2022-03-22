@@ -17,6 +17,7 @@ abstract class GasPoweredCar extends Car {
         }
         this.mpg = mpg;
         this.fuelCapacityGallons = fuelCapacityGallons;
+        this.currentFuel = fuelCapacityGallons;
     }
     
     /** Defaults mileage to 0. 

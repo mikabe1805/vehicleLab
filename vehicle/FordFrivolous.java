@@ -19,7 +19,7 @@ class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying{
 
     public void fly(double miles){
         if (this.canFly(miles)){
-            this.decreaseCharge(miles*3);
+            this.decreaseFuelLevel(miles);
         }
     }
 
