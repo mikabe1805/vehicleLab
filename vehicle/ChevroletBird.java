@@ -6,21 +6,22 @@ import java.util.*;
 public class ChevroletBird extends ElectricCar implements Flying{
     /** Chevrolet Birds have a 250 mile range on a full charge. They
     start with their wings retracted.*/
-    private boolean isRetracted;
+    private boolean isExtended;
 
     public ChevroletBird(double startingMileage) {
         super("Chevrolet","Bird",startingMileage, 250);
-        this.isRetracted = true;
+        this.isExtended = false;
     }
     
     /** Defaults mileage to 0. */
     public ChevroletBird() {
         super("Chevrolet", "Bird", 0, 250);
+        this.isExtended = false;
     }
     
     /** Returns whether the wings are currently extended. */
     public boolean checkWingsExtended() {
-        return this.isRetracted;
+        return this.isExtended;
     }
 
     /** Drives just like all other Electric Cars, except make sure that
@@ -28,7 +29,7 @@ public class ChevroletBird extends ElectricCar implements Flying{
     Coding tip: Write this method to re-use the behavior of the
     superclass drive. Don’t copy-and-paste the same code here.*/
     public void drive(double miles) {
-        this.isRetracted = true;
+        this.isExtended = false;
         super.drive(miles);
     }
 
@@ -37,7 +38,7 @@ public class ChevroletBird extends ElectricCar implements Flying{
     }
 
     public void fly(double miles){
-        this.isRetracted = false;
+        this.isExtended = true;
         if (this.canFly(miles)){
             this.decreaseCharge(miles);
         }

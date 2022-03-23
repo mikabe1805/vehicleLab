@@ -28,15 +28,15 @@ public class Group1_1_ChevroletBird extends BCATestScenario{
         assertEquals(d.getMaxRange(), 250.0, .1, "Max range is 250.0 mi");
 
         ChevroletBird e = new ChevroletBird();
-        assertFalse(e.checkWingsExtended(), "Wings should not be extended");
+        assertFalse(e.checkWingsExtended(), "Car e - Wings should not be extended");
         //assertEquals(e.checkWingsExtended(), "false");
         e.fly(0);
-        assertTrue(e.checkWingsExtended(), "Wings should be extended");
+        assertTrue(e.checkWingsExtended(), "Car e - Wings should be extended");
         //assertEquals(e.checkWingsExtended(), "true");
 
         ChevroletBird f = new ChevroletBird();
         f.drive(0);
-        assertFalse(e.checkWingsExtended(), "Wings should not be extended");
+        assertFalse(f.checkWingsExtended(), "Car f - Wings should not be extended");
         //assertEquals(e.checkWingsExtended(), "false");
         assertEquals(f.getMileage(), 0.0, .1, "Mileage is 0.0 mi");
 
@@ -44,9 +44,9 @@ public class Group1_1_ChevroletBird extends BCATestScenario{
 
         ChevroletBird g = new ChevroletBird();
         assertThrows(IllegalArgumentException.class, () -> {g.drive(1000000);}, "Driving over the max range limit. "); 
-        assertFalse(e.checkWingsExtended(), "Wings should not be extended");
+        //assertFalse(e.checkWingsExtended(), "Wings should not be extended");
         //assertEquals(e.checkWingsExtended(), "false");
-        assertEquals(g.getMileage(), 1000000, .1, "Mileage is 1000000.0 mi");
+        //assertEquals(g.getMileage(), 1000000, .1, "Mileage is 1000000.0 mi");
 
         return getFailedCount();
     }
