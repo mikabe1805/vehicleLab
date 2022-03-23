@@ -82,6 +82,11 @@ abstract class Car{
     @throws IllegalArgumentException if miles is negative for any of the
     attempted days.*/
     public int roadTrip(List<Double> milesEachDay) {
+        for (int i = 0; i < milesEachDay.size(); i++) {
+            if (milesEachDay.get(i) < 0) {
+                throw new IllegalArgumentException();
+            }
+        }
         int days = 0;
         Double miles;
         for (int i = 0; i < milesEachDay.size(); i++) {
@@ -89,7 +94,7 @@ abstract class Car{
             if (!canDrive(miles)) {
                 return days;
             }
-            mileage += miles;
+            drive(miles);
             days++;
         }
         return days;
