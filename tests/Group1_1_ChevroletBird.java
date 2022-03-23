@@ -43,7 +43,7 @@ public class Group1_1_ChevroletBird extends BCATestScenario{
         assertThrows(IllegalArgumentException.class, () -> {f.drive(-1);}, "Driving mileage cannot be negative.");
 
         ChevroletBird g = new ChevroletBird();
-        g.drive(1000000);
+        assertThrows(IllegalArgumentException.class, () -> {g.drive(1000000);}, "Driving over the max range limit. "); 
         assertFalse(e.checkWingsExtended(), "Wings should not be extended");
         //assertEquals(e.checkWingsExtended(), "false");
         assertEquals(g.getMileage(), 1000000, .1, "Mileage is 1000000.0 mi");
