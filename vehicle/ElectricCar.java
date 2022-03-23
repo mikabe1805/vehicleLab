@@ -1,7 +1,7 @@
 package vehicle;
 import java.util.*;
 
-abstract class ElectricCar extends Car{
+public abstract class ElectricCar extends Car{
 
     private double milesOnMaxCharge;
     private double milesOnCharge; // miles left for current charge
