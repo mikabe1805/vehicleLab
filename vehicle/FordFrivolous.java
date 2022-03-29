@@ -1,7 +1,7 @@
 package vehicle;
 import java.util.*;
 
-class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying{
+public class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying{
 
     /** FordFrivolous has a gas tank of 20 gallons and an MPG of 23.6. */
     public FordFrivolous(double startingMileage) {

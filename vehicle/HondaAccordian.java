@@ -15,7 +15,7 @@ public class HondaAccordian extends GasPoweredCar {
     
     /** Defaults mileage to 0. */
     public HondaAccordian(int year) {
-        super("HondaAccordian", "Accordian", 33.2, 14.5);
+        super("Honda", "Accordian", 33.2, 14.5);
         this.modelYear = year;
     }
     
