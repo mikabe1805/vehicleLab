@@ -32,9 +32,7 @@ public class Group1_3_FordFrivolous extends BCATestScenario {
         assertEquals(c1.getFuelLevel(), c1.getFuelCapacity(), .1, "refillTank method does not refill tank to the maximum amount.");
 
         assertTrue(c1.canFly(5), "Car is unable to fly 5 miles despite having a full tank.");
-        System.out.println(c1.getFuelLevel());
-        System.out.println(c1.getMPG());
-        System.out.println(c1.getFuelLevel() * c1.getMPG());
+        
         assertThrows(IllegalArgumentException.class, () -> {c1.fly(1000);}, "Cannot fly more than gas allows for.");
 
         assertThrows(IllegalArgumentException.class, () -> {c1.fly(-1);}, "Cannot fly negative amount of miles.");
