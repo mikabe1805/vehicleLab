@@ -53,7 +53,7 @@ public class Group1_5_ChevroletBird1_Driving extends BCATestScenario {
 
 		assertThrows(IllegalArgumentException.class,()->{c1.fly(-10);},"should throw IllegalArgumentException for negative miles");
 
-		assertThrows(IllegalArgumentException.class,()->{c1.fly(300);},"should throw IllegalArgumentException, out of range flying");
+		assertThrows(IllegalArgumentException.class,()->{c1.fly(300);},"should throw IllegalArgumentException, out of range");
 
 		c1.fly(200);
 
