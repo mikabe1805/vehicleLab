@@ -69,8 +69,15 @@ abstract class GasPoweredCar extends Car {
     @throws IllegalArgumentException if gallons is negative OR gallons
     would overfill the tank. */
     public void refillTank(double gallons) {
-        if (gallons < 0 || currentFuel + gallons > fuelCapacityGallons) {
+        if (gallons < 0 || gallons > fuelCapacityGallons) {
             throw new IllegalArgumentException();
+        } if (currentFuel < 1) {
+            currentFuel = gallons;
+            return;
+        } else {
+            if (currentFuel + gallons > fuelCapacityGallons) {
+                throw new IllegalArgumentException();
+            }
         }
         currentFuel += gallons;
     }

@@ -24,7 +24,8 @@ public class Group1_3_HondaAccordian extends BCATestScenario {
 
         assertThrows(IllegalArgumentException.class, () -> {c1.refillTank(14.6);}, "Cannot refill 14.6 gallons or more");
 
-        c1.refillTank(14.5);
+        System.out.println(c1.getFuelLevel());
+        c1.refillTank(14.5); // error here
         assertEquals(c1.getFuelLevel(), 14.5, .1, "Should be at max gallons (14.5) right now.");
 
         assertEquals(c1.getMileage(), 481.4, .1, "Mileage is not the right value (should be 481.4 miles)");
